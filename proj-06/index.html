@@ -3,40 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- TAB LABEL -->
-    <!-- ============================================================== -->
-    <title>Document</title>
+    <title>Dessert Cart</title>
 
-    <!-- STYLESHEETS -->
-    <!-- ============================================================== -->
-    <link rel="stylesheet" href="./stylesheets/output.css" />
+    <link rel="stylesheet" href="./src/stylesheets/output.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <!-- NAVBAR -->
-    <!-- ============================================================== -->
-    <nav class="flex w-full bg-red-400">
-      <ul class="flex">
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-      </ul>
-    </nav>
-    <!-- MAIN -->
-    <!-- ============================================================== -->
-    <main class="w-full bg-gray-500">
-      <div id="card_wrapper" class="w-full grid grid-cols-3 gap-6">
-        <div class="flex bg-red-500">1</div>
-        <div class="flex bg-green-500">2</div>
-        <div class="flex bg-blue-500">3</div>
+
+  <body class="bg-[#fcf8f5] min-h-screen">
+    <main class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
+        <!-- ================================================================= -->
+        <!-- Desserts Area -->
+        <!-- ================================================================= -->
+        <section>
+          <h1 class="text-4xl font-bold text-[#260f08] mb-8">Desserts</h1>
+
+          <!-- ================================================================= -->
+          <!-- Product cards -->
+          <!-- ================================================================= -->
+          <div
+            id="products_container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10"
+          >
+            <article>
+              <div class="relative">
+                <img src="" alt="" />
+
+                <button
+                  class="absolute -bottom-5 left-1/2 flex w-max -translate-x-1/2 items-center gap-2 rounded-full border border-[#ad8a85] bg-white px-6 py-3 text-sm font-semibold text-[#260f08]"
+                >
+                  🛒 Add to cart
+                </button>
+              </div>
+              
+              <div class="mt-9">
+                <p class="mt-1 font-semibold text-[#87635a]">Waffle</p>
+                <h2 class="mt-1 font-semibold text-[#260f08]">
+                  Waffle with Berries
+                </h2>
+                <p class="mt-1 font-semibold text-[#c73b0f]">
+                  $6.50
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- Cart panel -->
+        <!-- ================================================================= -->
+        <aside class="bg-white rounded-xl p-6 h-fit">
+          <h2 class="text-2xl font-bold text-[#c73b0f]">Your Cart (0)</h2>
+
+          <!-- ================================================================= -->
+          <!-- Empty-cart -->
+          <!-- ================================================================= -->
+          <div id="cart_container"></div>
+        </aside>
       </div>
     </main>
-    <!-- FOOTER -->
-    <!-- ============================================================== -->
-    <!-- <footer></footer> -->
-
-    <!-- SCRIPT -->
-    <script type="module" src="./scripts/app.js"></script>
   </body>
 </html>
