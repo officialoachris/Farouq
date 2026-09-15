@@ -6,48 +6,24 @@
     <title>Dessert Cart</title>
 
     <link rel="stylesheet" href="./src/stylesheets/output.css" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-[#fcf8f5] min-h-screen">
-    <main class="max-w-7xl mx-auto px-6 py-12">
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
+  <body>
+    <main class="bg-[#fcf8f5] h-full w-full px-25 py-25 mx-auto ">
+      <div class="max-w-[80vw] mx-auto h-full grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
         <!-- ================================================================= -->
         <!-- Desserts Area -->
         <!-- ================================================================= -->
-        <section>
+        <section class="w-full h-full">
           <h1 class="text-4xl font-bold text-[#260f08] mb-8">Desserts</h1>
 
           <!-- ================================================================= -->
           <!-- Product cards -->
           <!-- ================================================================= -->
           <div
-            id="products_container"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10"
-          >
-            <article>
-              <div class="relative">
-                <img src="" alt="" />
-
-                <button
-                  class="absolute -bottom-5 left-1/2 flex w-max -translate-x-1/2 items-center gap-2 rounded-full border border-[#ad8a85] bg-white px-6 py-3 text-sm font-semibold text-[#260f08]"
-                >
-                  🛒 Add to cart
-                </button>
-              </div>
-              
-              <div class="mt-9">
-                <p class="mt-1 font-semibold text-[#87635a]">Waffle</p>
-                <h2 class="mt-1 font-semibold text-[#260f08]">
-                  Waffle with Berries
-                </h2>
-                <p class="mt-1 font-semibold text-[#c73b0f]">
-                  $6.50
-                </p>
-              </div>
-            </article>
-          </div>
+            id="card_wrap"
+            class="w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-x-6 gap-y-10"
+          ></div>
         </section>
 
         <!-- ================================================================= -->
@@ -59,9 +35,19 @@
           <!-- ================================================================= -->
           <!-- Empty-cart -->
           <!-- ================================================================= -->
-          <div id="cart_container"></div>
+          <div id="cart_container">
+            <div class="flex flex-col items-center py-10 text-center">
+              <p class="text-5xl">🛒</p>
+
+              <p class="mt-4 text-sm font-semibold text-[#87635a]">
+                Your added items will appear here
+              </p>
+            </div>
+          </div>
         </aside>
       </div>
     </main>
+
+    <script type="module" src="./src/scripts/app.js"></script>
   </body>
 </html>
