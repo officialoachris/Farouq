@@ -2,7 +2,7 @@ export const cardData = [
   // Card 01
   {
     name: "Waffle",
-    description: "Waffle with Berries.",
+    description: "Waffle with Berries",
     price: "$6.50",
     image:"./src/images/image-waffle-desktop.jpg"
   },
@@ -16,8 +16,8 @@ export const cardData = [
   // Card 03
   {
     name: "Macaron",
-    description: "Macaron Mix of Five.",
-    price: "$8:00",
+    description: "Macaron Mix of Five",
+    price: "$8.00",
     image:"./src/images/image-macaron-desktop.jpg"
   },
   // Card 04

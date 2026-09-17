@@ -1,6 +1,6 @@
-export function cardComponent(card) {
+ export function cardComponent(card) {
   return `
-  <div class="p-6">
+  <article class="p-6">
         <div class="relative">
                 <img
                   src="${card.image}"
@@ -9,7 +9,8 @@ export function cardComponent(card) {
                 />
 
                 <button
-                  class="absolute text-[16px] -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-[#ad8a85] bg-white px-6 py-3 text-sm font-semibold text-[#260f08]"
+                  data-product="${card.name}"
+                  class="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-[#ad8a85] bg-white px-6 py-3 text-sm font-semibold text-[#260f08]"
                 >
                   🛒 Add to Cart
                 </button>
@@ -24,6 +25,6 @@ export function cardComponent(card) {
 
                 <p class="mt-1 text-[18px] font-semibold text-[#c73b0f]">${card.price}</p>
               </div>
-            </div>
+            </article> 
     `;
 }
